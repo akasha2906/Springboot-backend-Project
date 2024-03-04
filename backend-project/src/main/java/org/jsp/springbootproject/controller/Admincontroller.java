@@ -64,7 +64,7 @@ public class Admincontroller {
 	return service.verifybyemail(email, password);
 			
 	}
-	@GetMapping("/name/{name}")
+	@GetMapping("		{name}")
 	public List<Admin> findbyname(@PathVariable String name){
 		return service.findbyname(name);
 		
