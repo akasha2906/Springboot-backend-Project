@@ -1,15 +1,17 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import design from "./style/design.module.css"
 import { useState } from "react"
 import axios from "axios"
 const UserLogin=()=>{
     let [phone,setPhone]=useState(0)
     let [password,setPassword]=useState("")
+    let navi=useNavigate()
 
     function verify(){
         console.log(phone,password);
-        axios.get(`http://localhost:8080/merchants`)
-        .then((e)=>{console.log(e);})
+        axios.post(`http://localhost:8080/users/userbyphone?phone=${phone}&password=${password}`)
+        .then((e)=>{console.log(e.data.body);
+            navi(`/userhome/${e.data.body.id}`)})
         .catch(()=>{console.log("err");})
     }
 

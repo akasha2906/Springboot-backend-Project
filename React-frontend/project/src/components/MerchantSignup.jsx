@@ -1,12 +1,14 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import design from "./style/design.module.css"
 import { useState } from "react"
+import axios from "axios"
 const MerchantSignup=()=>{
         let[name,setName]=useState("")
     let[phone,setPhone]=useState()
     let[email,setEmail]=useState("")
     let[gst,setGst]=useState("")
     let[password,setPassword]=useState("")
+    let navi=useNavigate()
 
     function submit(){
         let merchant={
@@ -17,6 +19,11 @@ const MerchantSignup=()=>{
             "password":password
         }
         console.log(merchant);
+        axios.post(`http://localhost:8080/merchants`,merchant)
+        .then((e)=>{console.log(e.data.body.id)
+    navi(`/merchanthome/${e.data.body.id}`)
+})
+        .catch((e)=>{console.log("err");})
     }
 
     return(
