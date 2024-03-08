@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.landingpage{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(230, 126, 126);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landingpage>a{
+    height: 350px;
+    width: 20%;
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 40px;
+    margin-right: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.landingpage>a:hover{
+    box-shadow: 0px 0px 2px black;
+    transform: scale(110%);
+}
+
+.landingpage>a>img{
+    height: 250px;
+    width: 250px;
+}
+
+
+/* ========================================================================================================== */
+
+
+.login>.logins{
+    height: 500px;
+    width: 600px;
+    color: white;
+   padding-left: 155px;
+   padding-top: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* border: 1px solid black; */
+    border-radius: 25px;
+    box-shadow: 0px 0px 8px black;
+}
+#user{
+    background: linear-gradient(rgb(195, 241, 31),black);
+}
+
+.login{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    background: linear-gradient(rgb(241, 31, 223),black);
+}
+
+.login>form{
+    height: 350px;
+    width: 25%;
+    padding: 50px;
+
+    border: 1px solid black;
+}
+
+.login>.logins>img{
+    height: 260px;
+    width: 260px;
+}
+
+.login>.logins>tr>td>input{
+    margin-top: 20px;
+    margin-left: 25px;
+    color: white;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid black;
+}
+
+.login>.logins>button{
+    height: 35px;
+    width: 85px;
+    border-radius: 8px;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+
+
+.inputss{
+    height: 50px;
+    width: 200px;
+}
+
+/* =============================================== */
+
+.signup{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    background: linear-gradient(rgb(241, 31, 223),black);
+}
+
+.signup>.logins{
+    height: 580px;
+    width: 600px;
+    color: white;
+   padding-left: 155px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* border: 1px solid black; */
+    border-radius: 25px;
+    box-shadow: 0px 0px 8px black;
+}
+
+.signup>.logins>img{
+    height: 260px;
+    width: 260px;
+}
+
+.signup>.logins>tr>td>input{
+    margin-top: 20px;
+    margin-left: 25px;
+    color: white;
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid black;
+}
+
+.signup>.logins>button{
+    height: 35px;
+    width: 85px;
+    border-radius: 8px;
+    margin-top: 30px;
+    margin-left: 100px;
+}
