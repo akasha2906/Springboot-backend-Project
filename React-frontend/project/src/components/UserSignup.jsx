@@ -1,13 +1,14 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import design from "./style/design.module.css"
 import { useState } from "react"
+import axios from "axios"
 const UserSignup=()=>{
     let[name,setName]=useState("")
     let[phone,setPhone]=useState()
     let[email,setEmail]=useState("")
     let[gender,setGender]=useState("")
     let[password,setPassword]=useState("")
-
+    let navi=useNavigate()
     function submit(){
         let user={
             "name":name,
@@ -17,6 +18,12 @@ const UserSignup=()=>{
             "password":password
         }
         console.log(user);
+        axios.post(`http://localhost:8080/users`,user)
+        .then((e)=>{console.log("done");
+        navi(`/userhome/${e.data.body.id}`)
+    })
+        .catch((e)=>{console.log("err");})
+
     }
 
     return(
