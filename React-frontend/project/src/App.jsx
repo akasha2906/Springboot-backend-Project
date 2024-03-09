@@ -9,6 +9,8 @@ import UserHomepage from "./components/UserHomepage";
 import MerchantHome from "./components/MerchantHome";
 import Merchantupdate from "./components/Merchantupdate";
 import Userupdate from "./components/Userupdate";
+import DeleteMerchant from "./components/DeleteMerchant";
+import DeleteUser from "./components/DeleteUser";
 const App=()=>{
     return(
         <div>
@@ -23,6 +25,8 @@ const App=()=>{
                 <Route path="/merchanthome/:ak" element={<MerchantHome/>}/>
                 <Route path="/userupdate/:ak" element={<Userupdate/>}/>
                 <Route path="/merchantupdate/:ak" element={<Merchantupdate/>}/>
+                <Route path="/mdelete/:ak" element={<DeleteMerchant/>}/>
+                <Route path="/udelete/:ak" element={<DeleteUser/>}/>
             </Routes>           
             </BrowserRouter>
         </div>

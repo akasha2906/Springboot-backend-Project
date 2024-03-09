@@ -11,11 +11,10 @@ const Merchantupdate=()=>{
     let [gst,setGst]=useState("")
     let navi=useNavigate()
     let id=useParams()
-    console.log(id.ak);
 
     useEffect(()=>{
         axios.get(`http://localhost:8080/merchants/${id.ak}`)
-        .then((e)=>{console.log(e.data.body)
+        .then((e)=>{console.log("done")
         setName(e.data.body.name)
         setEmail(e.data.body.email)
         setGst(e.data.body.gst)
@@ -34,33 +33,33 @@ const Merchantupdate=()=>{
             "gst":gst,
             "password":password
         }
-        console.log(data);
+        // console.log(data);
 
         axios.put(`http://localhost:8080/merchants`,data)
-        .then((e)=>{console.log(e)
+        .then((e)=>{console.log("update done")
             navi(`/merchanthome/${e.data.body.id}`)
         })
-        .catch((e)=>{console.log(e);})
+        .catch((e)=>{console.log("err");})
 
     }
 
     return(<div className={design.update}>
-                <h1>merchant update</h1>
+                <h1 style={{fontSize:70}}>Update Merchant</h1>
                 <div className={design.ubox}>
                         <label htmlFor="">Name</label>
-                        <input value={name} onChange={(e)=>{setName(e.target.value)}}  type="text" />
+                        <input required value={name} onChange={(e)=>{setName(e.target.value)}}  type="text" />
                 
                          <label htmlFor="">Phone</label>
-                         <input value={phone} onChange={(e)=>{setPhone(e.target.value)}} type="text" />
+                         <input required value={phone} onChange={(e)=>{setPhone(e.target.value)}} type="text" />
                     
                          <label htmlFor="">Email</label>
-                         <input value={email} onChange={(e)=>{setEmail(e.target.value)}} type="text" />
+                         <input required value={email} onChange={(e)=>{setEmail(e.target.value)}} type="text" />
                 
                          <label htmlFor="">gender</label>
-                         <input value={gst} onChange={(e)=>{setGst(e.target.value)}} type="text" />
+                         <input required value={gst} onChange={(e)=>{setGst(e.target.value)}} type="text" />
                     
                          <label htmlFor="">Password</label>
-                        <input value={password} onChange={(e)=>{setPassword(e.target.value)}} type="text" />
+                        <input required value={password} onChange={(e)=>{setPassword(e.target.value)}} type="text" />
                     
                     <button onClick={submit}>Submit</button>
                 </div>

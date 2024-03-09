@@ -41,11 +41,14 @@
 
 
 .login>.logins{
-    height: 500px;
-    width: 600px;
+    height: 250px;
+    width: 500px;
     color: white;
-   padding-left: 155px;
-   padding-top: 40px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    grid-template-columns: 100px 150px;
     margin-top: 30px;
     margin-bottom: 30px;
     /* border: 1px solid black; */
@@ -66,34 +69,31 @@
     background: linear-gradient(rgb(241, 31, 223),black);
 }
 
-.login>form{
-    height: 350px;
-    width: 25%;
-    padding: 50px;
 
-    border: 1px solid black;
-}
 
-.login>.logins>img{
+.login>img{
     height: 260px;
     width: 260px;
 }
 
-.login>.logins>tr>td>input{
-    margin-top: 20px;
-    margin-left: 25px;
+.login>.logins>input{
+    height: 20px;
+    width: 180px;
     color: white;
+    padding-left: 3px;
     background-color: transparent;
-    border: 0;
     outline: 0;
+    border: 0;
     border-bottom: 1px solid black;
 }
 
 .login>.logins>button{
     height: 35px;
     width: 85px;
+    background-color: transparent;
+    color: white;
     border-radius: 8px;
-    margin-top: 30px;
+    margin-bottom: 10px;
     margin-left: 100px;
 }
 
@@ -117,10 +117,13 @@
 }
 
 .signup>.logins{
-    height: 580px;
-    width: 600px;
+    height: 450px;
+    width: 500px;
     color: white;
-   padding-left: 155px;
+    display: grid;
+    grid-template-columns: 150px 150px;
+   padding-top: 80px;    
+   padding-left: 80px;
     margin-top: 30px;
     margin-bottom: 30px;
     /* border: 1px solid black; */
@@ -128,14 +131,14 @@
     box-shadow: 0px 0px 8px black;
 }
 
-.signup>.logins>img{
-    height: 260px;
-    width: 260px;
+.signup>img{
+    height: 180px;
+    width: 180px;
 }
 
-.signup>.logins>tr>td>input{
-    margin-top: 20px;
-    margin-left: 25px;
+.signup>.logins>input{
+    height: 20px;
+    width: 180px;
     color: white;
     background-color: transparent;
     outline: 0;
@@ -148,5 +151,6 @@
     width: 85px;
     border-radius: 8px;
     margin-top: 30px;
-    margin-left: 100px;
+    margin-left: 130px;
 }
+
