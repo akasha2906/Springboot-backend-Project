@@ -19,6 +19,7 @@ const UserHomepage=()=>{
         <div className={design.home}>
             <h1 style={{color:"red",fontSize:80}}>welcome {user.name}</h1>   
             <Link to={`/userupdate/${user.id}`}>Update user</Link>
+            <Link to={`/udelete/${id.ak}`}>Delete User</Link>
 
         </div>
     )

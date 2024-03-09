@@ -8,17 +8,22 @@
     background: blueviolet;
 }
 
-.home>a{
+.home>a,.deletebtn{
     height: 40px;
     width: 180px;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: cursive;
+    border-color:rgb(184, 112, 251);
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    border: 1px solid black;
+    margin-top: 40px;
     border-radius: 20px;
+    border: 1px solid rgb(227, 150, 255);
+    box-shadow: 2px 2px 10px rgb(74, 6, 99);
 }
 
 
@@ -26,7 +31,7 @@
 .update{
     height: 100vh;
     width: 100%;
-    background-color: brown;
+    background: linear-gradient(rgb(234, 173, 251),rgb(96, 1, 123));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,17 +40,26 @@
 
 .update>.ubox{
     height: 50%;
-    width: 30%;
+    width: 25%;
+    font-family: cursive;
+    color: white;
+    margin-top: 50px;
     display: grid;
+    padding: 20px;
     grid-template-columns:150px 150px ;
     align-items: center;
     justify-content: center;
+    /* border: 1px solid black; */
+    box-shadow:-5px -5px 10px rgb(64, 4, 86), 2px 2px 10px rgb(223, 173, 242);
     border-radius: 25px;
-    background-color: chartreuse;
+    background-color: transparent;
 }
 
 .update>.ubox>input{
     background-color: transparent;
+    font-family: cursive;
+    color: white;
+    padding-left: 5px;
     border: 0;
     border-bottom: 1px solid black;
     outline: 0;
@@ -53,10 +67,52 @@
 
 .update>.ubox>button{
     background-color: transparent;
-    height: 30px;
-    width: 55%;
+    margin-left: 100px;
+    height: 40px;
+    width: 65%;
+    color: white;
+    font-size: 18px;
+    font-family: cursive;
+    border-color: rgb(227, 150, 255);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
+    box-shadow: 2px 1px 5px rgb(227, 150, 255);
+}
+
+/* ============================================================================ */
+
+.delete{
+    height: 100vh;
+    width: 100%;
+    background: #e61429;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete>.dbox{
+    height: 10%;
+    width: 30%;
+    /* background: #000; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.delete>.dbox>button{
+    height: 40px;
+    width: 80px;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    font-family: cursive;
+    border-color: rgb(255, 150, 150);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 2px 1px 5px rgb(255, 150, 150);
 }

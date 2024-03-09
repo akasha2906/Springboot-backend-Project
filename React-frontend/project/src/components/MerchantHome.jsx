@@ -2,6 +2,7 @@ import axios from "axios";
 import design from "./style/home.module.css"
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"
+import DeleteMerchant from "./DeleteMerchant";
 
 const MerchantHome=()=>{
     let [mer,setMer]=useState([])
@@ -14,9 +15,11 @@ const MerchantHome=()=>{
 
     return(
         <div className={design.home}>
-            {console.log("done")}
+            {/* {console.log("done")} */}
             <h1> Welcome {(mer.name)} </h1>
-            <Link to={`/merchantupdate/${mer.id}`}>Update merchant</Link>
+            <Link to={`/merchantupdate/${mer.id}`}>Update Merchant</Link>
+            <Link to={`/mdelete/${id.ak}`}>Delete Merchant</Link>
+            
         </div>
     )
 }

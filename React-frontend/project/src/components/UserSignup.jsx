@@ -17,40 +17,37 @@ const UserSignup=()=>{
             "email":email,
             "password":password
         }
-        console.log(user);
-        axios.post(`http://localhost:8080/users`,user)
+        // console.log(phone.length);
+        
+        {axios.post(`http://localhost:8080/users`,user)
         .then((e)=>{console.log("done");
-        navi(`/userhome/${e.data.body.id}`)
-    })
-        .catch((e)=>{console.log("err");})
+        navi(`/userhome/${e.data.body.id}`)})
+        .catch((e)=>{console.log("err");})}
 
     }
 
     return(
         <div id={design.user} className={design.signup}>
             <h1>User Signup</h1>     
-            <div className={design.logins}>
             <img src="https://www.vhv.rs/dpng/f/509-5097256_new-svg-image-login-logo-user-icon-hd.png" alt="" />
-            <tr>
-                    <td><label htmlFor="">Name: </label></td>
-                    <td><input type="text" onChange={(e)=>{setName(e.target.value)}}/></td>
-                </tr>
-                <tr>
-                    <td><label htmlFor="">Phone: </label></td>
-                    <td><input type="tel" onChange={(e)=>{setPhone(e.target.value)}} /></td>
-                </tr>
-                <tr>
-                    <td><label htmlFor="">Gender: </label></td>
-                    <td><input type="text" onChange={(e)=>{setGender(e.target.value)}} /></td>
-                </tr>
-                <tr>
-                    <td><label htmlFor="">Email: </label></td>
-                    <td><input type="email" onChange={(e)=>{setEmail(e.target.value)}} /></td>
-                </tr>
-                <tr>
-                    <td><label htmlFor="">Password: </label></td>
-                    <td><input type="password" onChange={(e)=>{setPassword(e.target.value)}} /></td>
-                </tr>
+            <div className={design.logins}>
+            
+                    <label htmlFor="">Name: </label>
+                    <input required type="text" onChange={(e)=>{setName(e.target.value)}}/>
+               
+               
+                    <label htmlFor="">Phone: </label>
+                    <input required type="tel" onChange={(e)=>{setPhone(e.target.value)}} />
+               
+                    <label htmlFor="">Gender: </label>
+                    <input required type="text" onChange={(e)=>{setGender(e.target.value)}} />
+                
+                    <label htmlFor="">Email: </label>
+                    <input required type="email" onChange={(e)=>{setEmail(e.target.value)}} />
+                
+                    <label htmlFor="">Password: </label>
+                    <input required type="password" onChange={(e)=>{setPassword(e.target.value)}} />
+                
                 <button onClick={submit}>submit</button>
             </div>       
             <h4 style={{color:"red"} } >I already have an account? <Link style={{textDecoration:"none"}} to="/user">Sign in</Link></h4>
